@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apo Basur Araştırma Merkezi</title>
+<style>
+:root{--bg:#eafaf1;--card:#ffffff;--ink:#16302b;--mute:#4f6b64;--hot:#e0245e;--line:#bfe3d0;--ok:#1b9e6b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1f1a;--card:#172c25;--ink:#e6f6ee;--mute:#9bbdb1;--hot:#ff5c8a;--line:#2b4a3f;--ok:#4fd3a0;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1f1a;--card:#172c25;--ink:#e6f6ee;--mute:#9bbdb1;--hot:#ff5c8a;--line:#2b4a3f;--ok:#4fd3a0;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Trebuchet MS","Segoe UI",system-ui,sans-serif;line-height:1.55}
+main{max-width:760px;margin:0 auto;padding:20px 16px 48px}
+header{text-align:center;padding:28px 0 12px}
+.stamp{display:inline-block;border:3px solid var(--hot);color:var(--hot);padding:4px 14px;border-radius:6px;font-weight:800;transform:rotate(-4deg);font-size:14px}
+h1{font-size:clamp(34px,9vw,60px);line-height:1.05;margin:16px 0 8px;font-weight:900}
+h1 span{color:var(--hot)}
+.sub{color:var(--mute);max-width:46ch;margin:0 auto}
+section{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:20px;margin-top:20px}
+h2{margin:0 0 12px;font-size:22px}
+.meter{height:26px;border-radius:13px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:97%;background:linear-gradient(90deg,var(--ok),#f5b700,var(--hot));transition:width .4s}
+.row{display:flex;justify-content:space-between;font-size:14px;color:var(--mute);margin-top:6px}
+button{font:inherit;font-weight:700;background:var(--hot);color:#fff;border:0;border-radius:12px;padding:12px 18px;cursor:pointer;margin:12px 8px 0 0}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.out{margin-top:14px;font-weight:700;min-height:3em;font-size:18px}
+dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;margin:0}
+dt{font-weight:800}dd{margin:0;color:var(--mute)}
+ul{padding-left:20px;margin:0}li{margin:8px 0}
+blockquote{margin:12px 0 0;padding:10px 14px;border-left:5px solid var(--hot);background:var(--bg);border-radius:6px}
+footer{text-align:center;color:var(--mute);font-size:13px;margin-top:28px}
+@media (prefers-reduced-motion:reduce){.fill{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="stamp">RESMİ TEŞHİS</div>
+  <h1>Apo <span>Basur</span> Araştırma Merkezi</h1>
+  <p class="sub">Bilim dünyası şu konuda hemfikir: Apo basurdur. Tartışmaya kapalıdır.</p>
+</header>
+
+<section>
+  <h2>Güncel Basur Seviyesi</h2>
+  <div class="meter"><div class="fill" id="fill"></div></div>
+  <div class="row"><span>Hafif</span><span id="pct">%97</span><span>Kritik</span></div>
+  <button id="btn">Apo'yu Tekrar Ölç</button>
+  <button id="btn2">Doktora Sor</button>
+  <div class="out" id="out">Ölçüm bekleniyor...</div>
+</section>
+
+<section>
+  <h2>Hasta Dosyası</h2>
+  <dl>
+    <dt>Hasta</dt><dd>Apo</dd>
+    <dt>Teşhis</dt><dd>Kronik, ölümcül, geçmeyen basur</dd>
+    <dt>Belirti</dt><dd>Oturamıyor, ayakta da duramıyor, hâlâ huysuz</dd>
+    <dt>Tedavi</dt><dd>Yok. Doktorlar da vazgeçti.</dd>
+    <dt>Yan etki</dt><dd>Etrafındakilere yoğun gülme krizi</dd>
+  </dl>
+</section>
+
+<section>
+  <h2>Apo Hakkında Bilimsel Gerçekler</h2>
+  <ul>
+    <li>Apo bir odaya girince sandalyeler kendiliğinden kaçıyor.</li>
+    <li>Halkalı simit görünce kendini yakın hissediyor, bilmiyoruz neden.</li>
+    <li>Eczacılar Apo'yu görünce kasayı kapatıp "bugün kapalıyız" diyor.</li>
+    <li>Basur kremi firmaları ona reklam yüzü olması için yalvardı, o da reddetti.</li>
+    <li>Apo'nun yanındaki en büyük destek yastığı artık emekli oldu.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Halktan Yorumlar</h2>
+  <blockquote>"Apo gelince herkes kalkıp yer veriyor, çünkü o oturamıyor." — Mahalle Amcası</blockquote>
+  <blockquote>"Basurdan bile daha inatçı." — Doktor (adını vermek istemedi)</blockquote>
+  <blockquote>"Apo'yu tanıyan, basuru zaten tanımış sayılır." — Anonim</blockquote>
+</section>
+
+<footer>Bu site tamamen şaka amaçlıdır. Apo bunu görünce kızmasın, sevgiyle yapıldı. 🍩</footer>
+</main>
+
+<script>
+(function(){
+  var fill=document.getElementById('fill'),pct=document.getElementById('pct'),out=document.getElementById('out');
+  var sonuc=[
+    "Ölçüm cihazı patladı. Yeni cihaz sipariş edildi.",
+    "Sonuç: Apo %100 basur. Marjin hatası yok.",
+    "Cihaz 'bu kadarı da olmaz' diyerek kendini kapattı.",
+    "Laboratuvar Apo'nun adını duyunca havalandırmayı açtı.",
+    "Bilim insanları basurdan özür diledi, kıyaslandığı için."
+  ];
+  var doktor=[
+    "Doktor: 'Ben bunu kitaplarda görmedim, kitap yazacağım.'",
+    "Doktor: 'Tedavisi yok ama gülmek iyi geliyor.'",
+    "Doktor: 'Önce oturun.' Apo: 'Oturamıyorum.' Doktor: 'Biliyorum.'",
+    "Doktor emekli olup balıkçılığa başladı."
+  ];
+  function rnd(a){return a[Math.floor(Math.random()*a.length)]}
+  document.getElementById('btn').addEventListener('click',function(){
+    var v=96+Math.floor(Math.random()*5);
+    fill.style.width=Math.min(v,100)+'%';
+    pct.textContent='%'+v+(v>100?' (taştı)':'');
+    out.textContent=rnd(sonuc);
+  });
+  document.getElementById('btn2').addEventListener('click',function(){out.textContent=rnd(doktor)});
+})();
+</script>
+</body>
+</html>
